@@ -1,4 +1,4 @@
-# CS50's web programming with Python and Javascript
+# CS50's [web programming](https://cs50.harvard.edu/web/2020/) with Python and Javascript
 Projects from CS50's web programming with python and javascript of Harvard university
 
 ## Project 0: 
