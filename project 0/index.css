@@ -1,0 +1,85 @@
+
+#whole_page {
+    display: flex;
+    flex-direction: column;
+}
+
+#picture_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+}
+
+#picture_div div {
+    position: relative;
+}
+
+#upper_picture {
+    height: 400px;
+}
+
+#google_picture {
+    max-height: 100%;
+    image-rendering: auto;
+    max-width: 300px;
+    object-position: center;
+}
+
+
+.texts {
+    float: right;
+    height: 50px;
+    align-items: center;
+}
+
+.texts div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.texts div a:link {
+    text-decoration: none;
+    color:black;
+}
+
+.texts div a:hover {
+    text-decoration: underline;
+}
+
+#searchBox {
+    text-align: center;
+    height:200px;
+}
+
+.search1 {
+    height: 140px;
+}
+
+.searchEnter {
+    height: 70px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+
+.googleSearch {
+    height: 70px;
+}
+
+.searchLucky {
+    margin: 11px 4px;
+    padding: 0px 16px;
+    height: 36px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#EnterSearchKey {
+    height: 40px;
+    width: 600px;
+    font-size: 20px;
+    border-radius:30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search </title>
+        <link rel="stylesheet" href="advanceSearch.css">
+        <script>
+            function Language(lang) {
+                document.querySelector("#lr_input").value = lang;
+            }
+
+            function Region(region) {
+                document.querySelector("#region").value = region;
+            }
+
+            function Time(time) {
+                document.querySelector("#time").value = time;
+            }
+
+            function Appear(appear) {
+                document.querySelector("#appear").value = appear;
+            }
+
+            function isExplicitResult(result) {
+                document.querySelector("#explicit").value = result;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="wholePage" border="0px" padding="0px">
+        <header id="gb">
+            <div class="header_div">
+                <div class="googleSearch">
+                    <a class="aa_search" aria-label="Google" href="/home/sherlock/web programming/Harvard course/project 0/index.html" title="Go to Google Home">
+                        <span class="bb_search" aria-hidden="true">
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </header>
+            <div class="advancedBar">
+                <label class="header1"> Advanced Search </label>
+            </div>
+            <div class="borderLine"></div>
+            <form id="form1" action="https:www.google.com/search" method="GET" name="f">
+                <div class="findBy">
+                    <div class="headerTable">
+                        <div class="findHeader">
+                            <span>Find pages with...</span>
+                        </div>
+                        <div class="whiteSpace"> </div>
+                        <div class="recommendText">To do this in the search box.</div>
+                    </div>
+                    <div class="manyInput">
+                        <div class="eachInputLine">
+                            <div class="FADVC">
+                                <label> all these words: </label>
+                            </div>
+                            <div class="EQSinput">
+                                <input id="input1" value="" autofocus="autofocus" name="as_q" type="text"></input>
+                            </div>
+                            <div class="recommendAD">
+                                Type the important words:
+                                <span class="recom asdas"> tri-color rat terrier</span>
+                            </div>
+                        </div>
+                        <div class="eachInputLine">
+                            <div class="FADVC">
+                                <label> this exact word or phrase: </label>
+                            </div>
+                            <div class="EQSinput">
+                                <input id="input1" value="" name="as_epq" type="text"></input>
+                            </div>
+                            <div class="recommendAD">
+                                Put exact words in quotes:
+                                <span class="recom asdas"> "rat terrier"</span>
+                            </div>
+                        </div>
+                        <div class="eachInputLine">
+                            <div class="FADVC">
+                                <label> any of these words: </label>
+                            </div>
+                            <div class="EQSinput">
+                                <input id="input1" value="" name="as_oq" type="text"></input>
+                            </div>
+                            <div class="recommendAD">
+                                Type OR between all the words you want: 
+                                <span class="recom asdas"> miniature OR standard</span>
+                            </div>
+                        </div>
+                        <div class="eachInputLine">
+                            <div class="FADVC">
+                                <label> none of these words: </label>
+                            </div>
+                            <div class="EQSinput">
+                                <input id="input1" value="" name="as_eq" type="text"></input>
+                            </div>
+                            <div class="recommendAD">
+                                Put a minus sign just before words that you don't want: 
+                                <span class="recom asdas"> -rodent, -"Jack Russell"</span>
+                            </div>
+                        </div>
+                        <div class="eachInputLine">
+                            <div class="FADVC">
+                                <label> numbers ranging from: </label>
+                            </div>
+                            <div>
+                                <div class="EQSinput">
+                                    <input id="inputlo" name="as_nlo" type="text" style="width:300px;"></input>
+                                </div>
+                                <div style="display:table-cell;width:10px;padding-right:6px;padding-left:0px;text-align:center;font-size:15px;color:#202124"> to </div>
+                                <div class="EQSinput">
+                                    <input id="inputhi" name="as_nhi" type="text" style="width:300px"> </input>
+                                </div>
+                            </div>
+                            <div class="recommendAD">
+                                Put two full stops between the numbers and add a unit of measurement: 
+                                <span class="recom asdas"> 10..35 kg, £300..£500, 2010..2011</span>
+                            </div>
+                        </div>
+
+                    <div class="borderLine"></div>
+                </div>
+
+                <div class="findBy" style="padding-top:0px">
+                    <div class="headerTable">
+                        <div class="findHeader">
+                            <span>Then narrow your results by...</span>
+                        </div>
+                        <div class="whiteSpace"> </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                        <div class="FADVC">
+                            <label> language: </label>
+                        </div>
+                        <div class="EQSinput">
+                            <div style="position:relative">
+                                <input id="lr_input" name="lr" value="" type="hidden">
+                                <select class="listbox">
+                                    <option selected>Any language</option>
+                                    <option onclick="Language('lang_ar')">Arabic</option>
+                                    <option onclick="Language('lang_hy')">Armenian</option>
+                                    <option onclick="Language('lang_cs')">Czech</option>
+                                    <option onclick="Language('lang_nl')">Dutch</option>
+                                    <option onclick="Language('lang_de')">German</option>
+                                    <option onclick="Language('lang_vn')">Vietnamese</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="recommendAD">
+                            Find pages in the language that you select.
+                        </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                        <div class="FADVC">
+                            <label> Region: </label>
+                        </div>
+                        <div class="EQSinput">
+                            <input id="region" name="cr" value="" type="hidden">
+                                <select class="listbox">
+                                    <option selected>Any region</option>
+                                    <option onclick="Region('countryAR')">Arabic</option>
+                                    <option onclick="Region('countryHY')">Armenian</option>
+                                    <option onclick="Region('countryCS')">Czech</option>
+                                    <option onclick="Region('countryEC')">Ecuador</option>
+                                    <option onclick="Region('countryDE')">Germany</option>
+                                    <option onclick="Region('countryVN')">Vietnam</option>
+                                </select>
+                        </div>
+                        <div class="recommendAD">
+                            Find pages published in a particular region.
+                        </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                        <div class="FADVC">
+                            <label> last update: </label>
+                        </div>
+                        <div>
+                            <input id="time" name="as_qdr" value="all" type="hidden">
+                                <select class="listbox">
+                                    <option selected>any time </option>
+                                    <option onclick="Time('d')">past 24 hours</option>
+                                    <option onclick="Time('w')">past week</option>
+                                    <option onclick="Time('m')">past month</option>
+                                    <option onclick="Time('y')">past year</option>
+                                </select>
+                        </div>
+                        <div class="recommendAD">
+                            Find pages updated within the time that you specify.
+                        </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                        <div class="FADVC">
+                            <label> language: </label>
+                        </div>
+                        <div>
+                            <input id="appear" name="as_occt" value="any" type="hidden">
+                                <select class="listbox">
+                                    <option selected>anywhere in the page </option>
+                                    <option onclick="Appear('title')">in the title of the page</option>
+                                    <option onclick="Appear('body')">in the text of the page</option>
+                                    <option onclick="Appear('links')">in the links of the page</option>
+                                    <option onclick="Appear('url')">in the URL of the page</option>
+                                </select>
+                        
+                        </div>
+                        <div class="recommendAD">
+                            Search for terms in the whole page, page title or web address, or links to the page you're looking for.
+                        </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                        <div class="FADVC">
+                            <a href="https://support.google.com/websearch/answer/510?p=adv_safesearch&hl=en" >SafeSearch</a>:
+                        </div>
+                        <div>
+                            <input id="explicit" name="safe" value="image" type="hidden">
+                                <select class="listbox">
+                                    <option selected>Show explicit results </option>
+                                    <option onclick="isExplicitResult('active')">Hide explicit results</option>
+
+                                </select>
+                        
+                        </div>
+                        <div class="recommendAD">
+                            Tell <a href="https://support.google.com/websearch/answer/510?p=adv_safesearch&hl=en">SafeSearch</a> whether to filter sexually explicit content.
+                        </div>
+                    </div>
+
+                    <div class="eachInputLine">
+                            <div class="FADVC">
+                            </div>
+                            <div class="EQSinput" id="submitInput">
+                                <input id="submitButton" type="submit" value="Advanced Search"></input>
+                            </div>
+                            <div class="recommendAD">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>

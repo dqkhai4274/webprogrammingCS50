@@ -1,0 +1,117 @@
+body {
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-size:100%;
+    font-family: Arial, sans-serif;
+
+}
+
+#gb {
+    background-color: white;
+    display:block;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.googleSearch {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.bb_search::before {
+    content: url('https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg');
+    display: inline-block;
+}
+
+.advancedBar {
+    font-size: 20px;
+    margin: 25px 35px;
+    color:chocolate;
+}
+
+.findBy {
+    margin: 30px 35px;
+    font-size: 18px;
+    clear: both;
+    padding-top: 50px;
+    border-color: aliceblue;
+}
+
+.whiteSpace {
+    width: 700px;
+    height: 50px;
+}
+
+.headerTable div {
+    display: table-cell;
+}
+
+.headerTable .recommendText {
+    font-weight: 600;
+    font-size: 80%;
+}
+
+
+.eachInputLine div{
+    display: table-cell;
+}
+
+.eachInputLine .FADVC {
+    font-size: 80%;
+    height: 42px;
+    width: 183px;
+}
+
+.eachInputLine .EQSinput input {
+    height: 25px;
+    width: 650px;
+    margin-right: 20px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+}
+
+.eachInputLine .recommendAD {
+    font-size: 75%;
+    opacity: 80%;
+    padding-bottom: 2px;
+}
+
+.eachInputLine .recommendAD span {
+    font-family: monospace;
+}
+
+#submitInput {
+    padding-left: 530px;
+    padding-bottom: 30px;
+}
+
+#submitButton {
+    height: max-content;
+    border-radius: 5px;
+    width: max-content;
+    background-color: #357ae8;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.listbox {
+    width:650px;
+    height:30px;
+    font-size:15px;
+    margin-right:20px;  
+}
+
+.borderLine {
+    border-bottom: 1px solid #ebebeb;
+}
+
+a {
+    text-decoration: none;
+    color:blue;
+}
+
+a:hover{
+    text-decoration: underline;
+}

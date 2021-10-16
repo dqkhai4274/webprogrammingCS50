@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Search </title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <script>
+        function Doodles() {
+            document.querySelector("form").action = "https://www.google.com/doodles"
+            document.querySelector("#EnterSearchKey").name = ""
+        }
+    </script>
+
+    <body>
+        <div id="whole_page">
+            <div class="header">
+                <div class="texts">
+                    <div>
+                        <a href="https://www.google.com/intl/vi/gmail/about/"> Gmail </a>
+                    </div>
+                    <div>
+                        <a href="https://www.google.com.vn/imghp"> Images </a>
+                    </div>
+                    <div>
+                        <a href="/home/sherlock/web programming/Harvard course/project 0/advancedSearch.html"> Advanced Search </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="picture_div">
+                <div id="upper_picture">
+                </div>
+                <div>
+                    <img id="google_picture"
+                        src="/home/sherlock/web programming/Harvard course/project 0/google_logo.png"
+                        alt="Google logo">
+                    </img>
+                </div>
+            </div>
+
+            <div id="searchBox">
+                <form action="https:www.google.com/search" method="GET">
+                    <div class="search1">
+                        <div class="searchEnter">
+                            <input id="EnterSearchKey" type="text" name="q" autofocus="true">
+                        </div>
+                        <div class="googleSearch">
+                            <center>
+                                <input class="searchLucky" type="submit" value="Google search"> 
+                                <input onclick="Doodles()" class="searchLucky" type="submit" value="I'm feeling lucky">
+                            </center>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
