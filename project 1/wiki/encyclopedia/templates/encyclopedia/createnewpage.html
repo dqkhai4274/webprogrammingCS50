@@ -1,0 +1,43 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create new wiki page
+{% endblock %}
+
+{% block body %}
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector("#submit_button").disabled = true;
+                document.querySelector("#title_new_page").onkeyup = () => {
+                    if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
+                    document.querySelector("#submit_button").disabled = false;
+                    }else{
+                        document.querySelector("#submit_button").disabled = true;   
+                    }
+                }
+
+                document.querySelector("#body_new_page").onkeyup = () => {
+                    if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
+                    document.querySelector("#submit_button").disabled = false;
+                    }else{
+                        document.querySelector("#submit_button").disabled = true;   
+                    }
+                }
+                
+            })
+        </script>
+    <form action="{% url 'create_new_page' %}" method="post">
+        {% csrf_token %}
+        <div class="titleHeader" style="padding:10px">
+            <input id="title_new_page" name="title" placeholder="Enter title" autofocus="autofocus"> </input>   
+        </div>
+        <div style="display:flex;">    
+            <textarea id="body_new_page" name="content" rows="4" cols="350"
+            style="border:5px groove lime;border-radius:5px;" autocapitalize="sentences" placeholder="Enter markdown document here..."></textarea>
+
+            <div style="padding-right:20px;width=100px;padding:20px;" >
+                <input id="submit_button" class="btn-outline-success" style="float:right;padding:10px;" type="submit" value="Save page"></input>
+            </div>
+        </div>
+    </form>
+{% endblock %}

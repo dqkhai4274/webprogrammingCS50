@@ -1,7 +1,3 @@
-# Git
+# Git 
 
-Git is a version control tool that can be used to keep track of versions of a software project.
-
-## GitHub
-
-GitHub is an online service for hosting git repositories.
+**Git**([/git/](https://en.wikipedia.org/wiki/Help:IPA/English)) is a software for tracking changes in any set of [files](https://en.wikipedia.org/wiki/Computer_file), usually used for coordinating work among [programmers](https://en.wikipedia.org/wiki/Programmer) collaboratively developing [source code](https://en.wikipedia.org/wiki/Source_code) during [software development](https://en.wikipedia.org/wiki/Software_development). Its goals include speed, [data integrity](https://en.wikipedia.org/wiki/Data_integrity), and support for distributed, non-linear workflows(thousands of parallel branches running on different systems.)
