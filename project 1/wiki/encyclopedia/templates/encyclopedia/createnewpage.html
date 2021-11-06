@@ -5,39 +5,90 @@
 {% endblock %}
 
 {% block body %}
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelector("#submit_button").disabled = true;
-                document.querySelector("#title_new_page").onkeyup = () => {
-                    if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
-                    document.querySelector("#submit_button").disabled = false;
-                    }else{
-                        document.querySelector("#submit_button").disabled = true;   
-                    }
-                }
+    <style>
+        .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        opacity: 1;
+        transition: opacity 0.6s;
+        margin-bottom: 15px;
+        }
 
-                document.querySelector("#body_new_page").onkeyup = () => {
-                    if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
-                    document.querySelector("#submit_button").disabled = false;
-                    }else{
-                        document.querySelector("#submit_button").disabled = true;   
-                    }
-                }
-                
-            })
-        </script>
+        .alert.success {background-color: #04AA6D;}
+        .alert.info {background-color: #2196F3;}
+        .alert.warning {background-color: #ff9800;}
+
+        .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        }
+
+        .closebtn:hover {
+        color: black;
+        }
+    </style>
+    
+    {% if message|length != 0 %}
+        <div class="alert">
+            <span class="closebtn">&times;</span>  
+            <strong>Error!</strong> {{message}}
+        </div>
+    {% endif %}
+
     <form action="{% url 'create_new_page' %}" method="post">
         {% csrf_token %}
+        <input type="hidden" name="isUpdate" value={{ isUpdate|default:"" }}>
         <div class="titleHeader" style="padding:10px">
-            <input id="title_new_page" name="title" placeholder="Enter title" autofocus="autofocus"> </input>   
+            <input id="title_new_page" name="title" placeholder="Enter title" autofocus="autofocus" value={{ title|default:"" }}>            
+            </input>   
         </div>
         <div style="display:flex;">    
             <textarea id="body_new_page" name="content" rows="4" cols="350"
-            style="border:5px groove lime;border-radius:5px;" autocapitalize="sentences" placeholder="Enter markdown document here..."></textarea>
+            style="border:5px groove lime;border-radius:5px;" autocapitalize="sentences" placeholder="Enter markdown document here...">{{ content|default:"" }}
+            </textarea>
 
             <div style="padding-right:20px;width=100px;padding:20px;" >
                 <input id="submit_button" class="btn-outline-success" style="float:right;padding:10px;" type="submit" value="Save page"></input>
             </div>
         </div>
     </form>
+
+    <script>
+        var close = document.getElementsByClassName("closebtn");
+        var i;
+        for(i = 0; i < close.length; i++){
+            close[i].onclick = function(){
+                var div = this.parentElement;
+                div.style.opacity = "0";
+                setTimeout(function(){ div.stype.display = "none";}, 600);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector("#submit_button").disabled = true;
+            document.querySelector("#title_new_page").onkeyup = () => {
+                if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
+                document.querySelector("#submit_button").disabled = false;
+                }else{
+                    document.querySelector("#submit_button").disabled = true;   
+                }
+            }
+
+            document.querySelector("#body_new_page").onkeyup = () => {
+                if(document.querySelector("#title_new_page").value.length > 0 && document.querySelector("#body_new_page").value.length > 0){
+                document.querySelector("#submit_button").disabled = false;
+                }else{
+                    document.querySelector("#submit_button").disabled = true;   
+                }
+            }
+            
+        })
+    </script>
 {% endblock %}

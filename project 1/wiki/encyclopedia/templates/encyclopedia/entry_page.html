@@ -1,0 +1,39 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{entry_title}} - Wiki
+{% endblock %}
+
+{% block body %}
+    <style>
+        .edit:link {
+        background-color: yellow;
+        }
+
+        .edit:visited {
+        background-color: cyan;
+        }
+
+        .edit:hover {
+        background-color: lightgreen;
+        }
+
+        .edit:active {
+        background-color: hotpink;
+        }  
+
+        .edit:link, .edit:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        }
+
+    </style>
+    <div class="edit">
+        <a href={% url "edit_page"  %}>Edit page</a>
+    </div>
+    {{ html_file|safe }}
+{% endblock %}
